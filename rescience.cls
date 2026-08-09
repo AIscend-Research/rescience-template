@@ -49,56 +49,21 @@
 
 % --- Font stack --------------------------------------------------------------
 
-%% PDFLaTeX
-%% \RequirePackage[light,condensed]{roboto} % Sans Serif
-%% \RequirePackage[default,light,semibold,tabular]{sourceserifpro} % Roman
-%% \RequirePackage[varqu]{zi4} % Monotype
-%% \makeatletter
-%% \def\bfseries@sf{sb}
-%% \makeatother
+% PDFLaTeX -- fonts come from TeX Live packages, no font files to ship.
+\RequirePackage[T1]{fontenc}
+\RequirePackage[light,condensed]{roboto}          % Sans Serif
+\RequirePackage[default,light,semibold,tabular]{sourceserifpro} % Roman
+\RequirePackage[varqu]{zi4}                       % Monotype
+\makeatletter
+\def\bfseries@sf{sb}
+\makeatother
 
-% XeLaTeX
-\RequirePackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Source Serif Pro}[
-  Path = ./source-serif-pro/SourceSerifPro-, Extension = .otf,
-  UprightFont= Light,
-  ItalicFont = LightIt,
-  BoldFont   = Regular,
-  BoldItalicFont = It,
-]
-\setsansfont{Roboto Condensed}[
-  Path = ./roboto/RobotoCondensed-, Extension = .ttf,
-  UprightFont = Light,
-  BoldFont = Regular,
-  ItalicFont = LightItalic
-]
-
-\setmonofont{Source Code Pro}[
-  Path = ./source-code-pro/SourceCodePro-, Extension = .otf,
-  UprightFont = Light,
-  BoldFont = Regular
-]
-
-\newfontfamily\RobotoCon{Roboto Condensed}[
-  Path = ./roboto/RobotoCondensed-, Extension = .ttf,
-  UprightFont = Regular,
-  BoldFont = Bold
-]
-
-\newfontfamily\Roboto{Roboto}[
-  Path = ./roboto/Roboto-, Extension = .ttf,
-  UprightFont = Regular,
-  BoldFont = Black
-]
-
-\newfontfamily\SpaceRoboto{Roboto}[
-  Path = ./roboto/Roboto-, Extension = .ttf,
-  UprightFont = Regular,
-  BoldFont = Medium,
-  UprightFeatures={LetterSpace=35},
-  BoldFeatures={LetterSpace=35}
-]
+% Font-switch commands used by header.tex / the title block. Under XeLaTeX
+% these were separate \newfontfamily declarations; here they map onto the
+% sans family above.
+\newcommand{\RobotoCon}{\sffamily}
+\newcommand{\Roboto}{\sffamily}
+\newcommand{\SpaceRoboto}{\sffamily}
 
 
 \RequirePackage{microtype}

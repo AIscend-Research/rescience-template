@@ -3,7 +3,7 @@
 Upload this folder to Overleaf and set:
 
 - **Main document:** `article.tex`
-- **Compiler:** XeLaTeX (required — the class loads the bundled OTF/TTF fonts via `fontspec`)
+- **Compiler:** pdfLaTeX (the class now uses the `roboto` / `sourceserifpro` / `zi4` TeX Live font packages — no font files are shipped)
 
 ## Files
 
@@ -15,5 +15,4 @@ Upload this folder to Overleaf and set:
 | `header.tex` | Title block, margin notes, copyright statement |
 | `bibliography.bib` | References |
 | `rescience.cls` | Journal class file — don't edit |
-| `roboto/`, `source-*/` | Bundled fonts used by the class |
 | `COPYING` | License |
