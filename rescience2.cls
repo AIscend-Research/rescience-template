@@ -15,7 +15,7 @@
 %% ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rescience}[2019/04/12 Style for ReScience articles]
+\ProvidesClass{rescience2}[2019/04/12 Style for ReScience articles]
 
 \LoadClass[a4paper, oneside, 10pt]{article}
 
